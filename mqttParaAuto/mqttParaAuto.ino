@@ -3,14 +3,14 @@
 #define SEC_TO_MILISEC(x) ((x)*1000) 
 
 #define IN1 D3
-#define IN2 D2
-#define ENA D1
+#define IN2 D4
+#define ENA D2
 
-#define IN3 D6
+#define IN3 D8
 #define IN4 D5
-#define ENB D4
+#define ENB D1
 
-//#define DEBUGG
+#define DEBUGG
 
 
 
@@ -37,15 +37,15 @@ class L298_NODEMCU {
 
 
 
-char * ssid ="WIFI Pier";
-char * pass ="pagle736pagle";
+char * ssid ="IOT 2020";
+char * pass ="itba2020";
 unsigned int mqttPort=1883;
 
 const char MqttUser[]="auto1";
 const char MqttPassword[]="1234";
 const char MqttClientID[]="a1";
 
-IPAddress mqttServer(192,168,0,116);
+IPAddress mqttServer(192,168,2,101);
 
 WiFiClient wclient;
 PubSubClient mqtt_client(wclient);
@@ -154,6 +154,7 @@ void setup() {
   setUpWifi(ssid,pass);
   setUpMqtt();
 
+  
   // Initialize Serial port
   Serial.begin(9600);
  
