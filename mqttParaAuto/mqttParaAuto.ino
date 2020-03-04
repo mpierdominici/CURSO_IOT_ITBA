@@ -45,7 +45,7 @@ const char MqttUser[]="auto1";
 const char MqttPassword[]="1234";
 const char MqttClientID[]="a1";
 
-IPAddress mqttServer(192,168,2,101);
+IPAddress mqttServer(192,168,2,105);
 
 WiFiClient wclient;
 PubSubClient mqtt_client(wclient);
